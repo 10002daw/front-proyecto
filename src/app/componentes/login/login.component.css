@@ -5,3 +5,10 @@ input.ng-valid.ng-touched {
 input.ng-invalid.ng-touched {
     border: 1px solid red;
 }
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}

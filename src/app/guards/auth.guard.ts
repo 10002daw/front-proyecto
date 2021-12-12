@@ -26,6 +26,7 @@ export class AuthGuard implements CanActivate {
         )
         .catch(
           (error) => {
+            console.log(error);
             console.log('sesión no iniciada');
             return this.router.parseUrl('/login');
           }

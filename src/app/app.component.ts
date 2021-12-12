@@ -28,4 +28,8 @@ export class AppComponent {
     //     console.log(error);
     //   });
   }
+
+  cerrar() {
+    this.authService.logout().then(response=>console.log(response)).catch(error=>console.log(error));
+  }
 }

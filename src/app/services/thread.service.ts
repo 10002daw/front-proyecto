@@ -14,7 +14,7 @@ export class ThreadService {
     this.baseUrl = "http://localhost:8000/api/v1";
   }
 
-  getAllByCommunity(id: number): Promise<any[]> {
+  getThreadsByCommunity(id: string): Promise<any[]> {
     return this.http.get<any>(`${this.baseUrl}/communities/${id}/threads`).toPromise();
   }
 

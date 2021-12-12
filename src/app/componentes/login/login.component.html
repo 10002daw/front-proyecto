@@ -1,14 +1,17 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" name="email" class="form-control" formControlName="email">
-        <div class="error" *ngIf="formulario.controls['email'].errors">
-            El campo email es erroneo
+<main class="form-signin">
+    <form  [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" name="email" class="form-control" formControlName="email">
+            <label for="email" class="">Email</label>
+            <div class="invalid-feedback" *ngIf="formulario.controls['email'].errors">
+                El campo email es erroneo
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" name="password" class="form-control" formControlName="password">
-    </div>
-    <input type="submit" value="Entrar" class="btn btn-block btn-primary" [disabled]="!formulario.valid">
-</form>
+        <div class="form-floating">
+            <input type="password" name="password" class="form-control" formControlName="password">
+            <label for="password">Password</label>
+        </div>
+        <input type="submit" value="Entrar" class="w-100 btn btn-lg btn-primary" [disabled]="!formulario.valid">
+        <a [routerLink]="['/registro']">Registrarse</a>
+    </form>
+</main>

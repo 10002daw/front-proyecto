@@ -11,20 +11,26 @@ import { AuthInterceptorService } from './auth-interceptor.service';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { CommunityComponent } from './componentes/community/community.component';
+import { DataTablesModule } from 'angular-datatables';
+import { UsersComponent } from './admin/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    IndexComponent
+    IndexComponent,
+    CommunityComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DataTablesModule
   ],
   providers: [
     {

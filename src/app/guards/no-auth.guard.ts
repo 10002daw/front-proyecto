@@ -24,7 +24,7 @@ export class NoAuthGuard implements CanActivate {
         )
         .catch(
           (error) => {
-            return false;
+            return true;
           }
         );
   }

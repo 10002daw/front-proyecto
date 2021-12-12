@@ -1,1 +1,5 @@
-<p>index works!</p>
+<div class="list-group">
+    <button [routerLink]="['/community', community.id]" type="button" class="list-group-item list-group-item-action" aria-current="true" *ngFor="let community of communities">
+      {{ community.name }}
+    </button>
+</div>

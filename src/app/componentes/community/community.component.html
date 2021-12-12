@@ -1,0 +1,5 @@
+<div class="list-group">
+    <button [routerLink]="['/thread', thread.id]" type="button" class="list-group-item list-group-item-action" aria-current="true" *ngFor="let thread of threads">
+      {{ thread.title }}
+    </button>
+</div>
